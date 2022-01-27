@@ -1,7 +1,7 @@
 * {
     margin-bottom: 10px;
     margin-top: 10px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans";
     /* font-size: 20px; */
     border-radius: 10px;
 
@@ -51,11 +51,9 @@ td {
  }
 
 h2 {
-    border: 4px solid black; 
-    padding: 10px;
-    /*display: inline-block;*/
     text-align: center;
-}
+    text-transform: uppercase;
+} 
 
 .bold-label, p {
     font-weight: bold;
@@ -84,3 +82,23 @@ button:hover {
 }
 
 
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li, h2 {
+    font-family: "Trebuchet MS", "Lucida Sans";
+    padding: 7px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
+         -2px -2px 5px 0 rgba(0,0,0,.1),
+        2px 2px 5px 0 rgba(0,0,0,.1),
+        -2px 2px 5px 0 rgba(0,0,0,.1);
+    font-size: 20px;
+    letter-spacing: 2px;
+    transition: 0.3s all linear;
+}
+ 
+     

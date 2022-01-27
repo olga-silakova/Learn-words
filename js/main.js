@@ -18,6 +18,7 @@ function clickHandler(e) {
         console.log({ word });
         var msg = new SpeechSynthesisUtterance(word);
         msg.lang = 'en-US';
+        msg.rate=0.4;
         window.speechSynthesis.speak(msg);
     }
 
