@@ -18,10 +18,10 @@
             <td word="horse"></td>
         </tr>
         <tr>
-            <td word="cat"></td>
-            <td word="dog"></td>
-            <td word="duck"></td>
-            <td word="horse"></td>
+            <td word="hen"></td>
+            <td word="pig"></td>
+            <td word="sheep"></td>
+            <td word="cow"></td>
         </tr>
     </table>
     <script>
@@ -29,7 +29,7 @@
         // document.querySelectorAll(td)
         const cells = document.getElementsByTagName('td');
         for (const cell of cells) {
-            cell.innerHTML= '<img><br><button>?</button>'
+            cell.innerHTML = '<img><br><button>?</button>'
             const img = cell.getElementsByTagName('img')[0]
             const word = cell.getAttribute('word')
             img.setAttribute('src', './' + word + '.jpg')
@@ -47,8 +47,15 @@
 
             if (el.tagName === 'BUTTON') {
                 const word = el.parentElement.getAttribute('word')
-                el.innerHTML = word;
+
+                if (el.innerHTML === word) {
+                    el.innerHTML = "?"
+                } else {
+                    el.innerHTML = word
+                }
             }
+
+
         }
 
         document.addEventListener('click', clickHandler)
