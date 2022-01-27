@@ -2,15 +2,37 @@
     margin-bottom: 10px;
     margin-top: 10px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
+    /* font-size: 20px; */
     border-radius: 10px;
 
 }
 
 img {
     width: 200px;
+    height: 200px;
+    object-fit: cover;
     text-align: center;
     cursor: pointer;
+    margin: 5px;
+}
+
+img:hover {
+    object-fit: cover;
+    box-shadow: 5px 5px 5px gray;
+    transition: box-shadow 0.1s ease-in-out;
+}
+
+.sound {
+    position: absolute;
+    background-color: white;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.card-wrapper {
+    position: relative;
 }
 
 table {
@@ -51,6 +73,8 @@ button {
     float: initial;
 }
 
-
+button:hover {
+    box-shadow: 5px 5px 5px gray;
+}
 
 

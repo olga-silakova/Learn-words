@@ -3,7 +3,7 @@
 // document.querySelectorAll(td)
 const cells = document.getElementsByTagName('td');
 for (const cell of cells) {
-    cell.innerHTML = '<img><br><button>?</button>'
+    cell.innerHTML = '<div class="card-wrapper"><img><img class="sound" src="https://cdn2.iconfinder.com/data/icons/mutuline-ui-essential/48/sound_on-1024.png"></div><br><button>?</button>'
     const img = cell.getElementsByTagName('img')[0]
     const word = cell.getAttribute('word')
     img.setAttribute('src', './' + word + '.jpg')
@@ -12,7 +12,7 @@ for (const cell of cells) {
 function clickHandler(e) {
     el = e.target;
     if (el.tagName === 'IMG') {
-        const word = el.parentElement.getAttribute('word')
+        const word = el.parentElement.parentElement.getAttribute('word')
         console.log({ word });
         var msg = new SpeechSynthesisUtterance(word);
         msg.lang = 'en-US';
