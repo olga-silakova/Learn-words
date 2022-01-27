@@ -41,6 +41,7 @@
                 const word = el.parentElement.getAttribute('word')
                 console.log({ word });
                 var msg = new SpeechSynthesisUtterance(word);
+                msg.lang = 'en-US';
                 window.speechSynthesis.speak(msg);
             }
 
