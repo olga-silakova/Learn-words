@@ -18,8 +18,8 @@ img {
 
 img:hover {
     object-fit: cover;
-    box-shadow: 5px 5px 5px gray;
-    transition: box-shadow 0.1s ease-in-out;
+    box-shadow: 3px 3px 3px gray;
+    transition: box-shadow 0.2s ease-in-out;
 }
 
 .sound {
@@ -33,6 +33,7 @@ img:hover {
 
 .card-wrapper {
     position: relative;
+    margin: 0px;
 }
 
 table {
@@ -46,6 +47,7 @@ td {
     justify-content: center;
     text-align: center;
     vertical-align: bottom;
+    align-items: center;
  }
 
 h2 {
@@ -70,11 +72,15 @@ button {
     border: 2px solid rgb(240, 21, 21);
     text-align: center;
     cursor: pointer;
-    float: initial;
+    display:inline-block;
+    margin-top: 0px;
+    margin-bottom: 5px;
 }
 
 button:hover {
-    box-shadow: 5px 5px 5px gray;
+    box-shadow: 3px 3px 3px gray;
+    transition: box-shadow 0.2s ease-in-out;
+
 }
 
 
