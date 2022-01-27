@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Animals</title>
+    <link rel="stylesheet" type="text/css" href="../main.css" />
+</head>
+
+<body>
+
+    <h2>ANIMALS</h2>
+    <table align="center">
+        <tr>
+            <td word="cat"></td>
+            <td word="dog"></td>
+            <td word="duck"></td>
+            <td word="horse"></td>
+        </tr>
+        <tr>
+            <td word="cat"></td>
+            <td word="dog"></td>
+            <td word="duck"></td>
+            <td word="horse"></td>
+        </tr>
+    </table>
+    <script>
+
+        // document.querySelectorAll(td)
+        const cells = document.getElementsByTagName('td');
+        for (const cell of cells) {
+            cell.innerHTML= '<img><br><button>?</button>'
+            const img = cell.getElementsByTagName('img')[0]
+            const word = cell.getAttribute('word')
+            img.setAttribute('src', './' + word + '.jpg')
+        }
+
+        function clickHandler(e) {
+            el = e.target;
+            if (el.tagName === 'IMG') {
+                const word = el.parentElement.getAttribute('word')
+                console.log({ word });
+                var msg = new SpeechSynthesisUtterance(word);
+                window.speechSynthesis.speak(msg);
+            }
+
+            if (el.tagName === 'BUTTON') {
+                const word = el.parentElement.getAttribute('word')
+                el.innerHTML = word;
+            }
+        }
+
+        document.addEventListener('click', clickHandler)
+
+    </script>
+
+
+</body>
+
+</html>
