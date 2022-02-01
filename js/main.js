@@ -3,7 +3,6 @@
 // document.querySelectorAll(td)
 const cells = document.getElementsByTagName('td');
 for (const cell of cells) {
-    // cell.innerHTML = '<div class="card-wrapper"><img><img class="sound" src="https://cdn2.iconfinder.com/data/icons/mutuline-ui-essential/48/sound_on-1024.png"></div><br><button>?</button>'
     cell.innerHTML = '<div class="card-wrapper"><img><img class="sound" src="../sound.png"></div><button>?</button>'
     
     const img = cell.getElementsByTagName('img')[0]
@@ -18,7 +17,8 @@ function clickHandler(e) {
         console.log({ word });
         var msg = new SpeechSynthesisUtterance(word);
         msg.lang = 'en-US';
-        msg.rate=0.4;
+        // msg.lang = 'ka-GE';
+        msg.rate=0.5;
         window.speechSynthesis.speak(msg);
     }
 
