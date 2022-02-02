@@ -6,6 +6,9 @@
 
 }
 
+html, body {
+    margin-top: 0px;
+}
 img {
     width: 200px;
     height: 200px;
@@ -41,8 +44,16 @@ img {
 table {
     border-collapse: separate;
     border-spacing: 20px;
+    
  }
 
+.topics {
+    width: 600px;
+    padding: 5px;
+    font-size: 20px;
+
+    
+}
 td {
     border-collapse: collapse;
     border: 2px solid #727272;
@@ -60,6 +71,12 @@ td {
 h2 {
     text-align: center;
     text-transform: uppercase;
+    position: sticky;
+    top: 15px;
+    background-color: white;
+    z-index: 9999;
+    margin-top: 0px;
+
 } 
 
 .bold-label, p {
@@ -67,27 +84,24 @@ h2 {
 }
 
 button {
-    color: red;
+    color: rgb(219, 30, 46);
     font-weight: bold;
     text-transform: uppercase;
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
-    border: 2px solid rgb(240, 21, 21);
+    border: 2px solid rgb(219, 30, 46);
     text-align: center;
     cursor: pointer;
     display:inline-block;
     margin-top: 0px;
     margin-bottom: 5px;
-  }
+}
 
 button:hover {
     box-shadow: 3px 3px 3px gray;
-    transition: box-shadow 0.2s ease-in-out;
-
-}
-
+    transition: box-shadow 0.2s ease-in-out;}
 
 ul {
     list-style: none;
@@ -95,16 +109,16 @@ ul {
 }
 
 li, h2 {
-    font-family: "Trebuchet MS", "Lucida Sans";
     padding: 7px 20px;
     margin-bottom: 10px;
     box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
                -2px -2px 5px 0 rgba(0,0,0,.1),
                 2px 2px 5px 0 rgba(0,0,0,.1),
                -2px 2px 5px 0 rgba(0,0,0,.1);
-    font-size: 20px;
+    font-size: 30px;
     letter-spacing: 1px;
-    /* transition: 0.3s all linear; */
+    
+
 }
 
 a {
@@ -115,5 +129,8 @@ a:hover {
     transition: box-shadow 0.2s ease-in-out;
     color: #000;
 }
- 
-     
+
+a.back {
+    position: sticky;
+    top: 70px;
+}
