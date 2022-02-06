@@ -1,14 +1,21 @@
 * {
-    margin-bottom: 10px;
-    margin-top: 10px;
     font-family: Metric Semibold,Arial,sans-serif;
-    border-radius: 8px;
-
+    border-radius: 7px;
 }
 
-html, body {
-    margin-top: 0px;
+.header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        background-color: white;     
 }
+
+.content {
+    margin-top: 80px;
+}
+
 img {
     width: 200px;
     height: 200px;
@@ -24,7 +31,7 @@ img {
     transition: box-shadow 0.2s ease-in-out;
 } */
 
-.sound {
+.soundicon {
     position: absolute;
     background-color: white;
     bottom: 10px;
@@ -44,16 +51,14 @@ img {
 table {
     border-collapse: separate;
     border-spacing: 20px;
-    
  }
 
 .topics {
     width: 600px;
     padding: 5px;
     font-size: 20px;
-
-    
 }
+
 td {
     border-collapse: collapse;
     border: 2px solid #727272;
@@ -65,19 +70,25 @@ td {
 
  td:hover {
     border: 2px solid #000000;
-
  }
 
 h2 {
     text-align: center;
     text-transform: uppercase;
-    position: sticky;
     top: 15px;
     background-color: white;
     z-index: 9999;
-    margin-top: 0px;
-
+    margin-top: 10px;
+    padding: 7px 20px;
+    margin-bottom: 10px;
+    box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
+               -2px -2px 5px 0 rgba(0,0,0,.1),
+                2px 2px 5px 0 rgba(0,0,0,.1),
+               -2px 2px 5px 0 rgba(0,0,0,.1);
+    font-size: 30px;
+    letter-spacing: 1px;
 } 
+
 
 .bold-label, p {
     font-weight: bold;
@@ -86,6 +97,7 @@ h2 {
 button {
     color: rgb(219, 30, 46);
     font-weight: bold;
+    font-size: 18px;
     text-transform: uppercase;
     padding-left: 15px;
     padding-right: 15px;
@@ -108,23 +120,11 @@ ul {
     padding: 0;
 }
 
-li, h2 {
-    padding: 7px 20px;
-    margin-bottom: 10px;
-    box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
-               -2px -2px 5px 0 rgba(0,0,0,.1),
-                2px 2px 5px 0 rgba(0,0,0,.1),
-               -2px 2px 5px 0 rgba(0,0,0,.1);
-    font-size: 30px;
-    letter-spacing: 1px;
-    
-
-}
-
 a {
     text-decoration: none;
     color: #727272;
 }
+
 a:hover {
     transition: box-shadow 0.2s ease-in-out;
     color: #000;
@@ -132,5 +132,7 @@ a:hover {
 
 a.back {
     position: sticky;
-    top: 70px;
+    top: 80px;
+    font-size: 25px;
+    margin: 10px;
 }

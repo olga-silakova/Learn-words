@@ -3,7 +3,7 @@
 // document.querySelectorAll(td)
 const cells = document.getElementsByTagName('td');
 for (const cell of cells) {
-    cell.innerHTML = '<div class="card-wrapper"><img><img class="sound" src="../sound.png"></div><button>?</button>'
+    cell.innerHTML = '<div class="card-wrapper"><img><img class="soundicon" src="../sound.png"></div><button>?</button>'
     
     const img = cell.getElementsByTagName('img')[0]
     const word = cell.getAttribute('word')
@@ -16,9 +16,9 @@ function clickHandler(e) {
         const word = el.parentElement.parentElement.getAttribute('word')
         console.log({ word });
         var msg = new SpeechSynthesisUtterance(word);
-        msg.lang = 'en-US';
+        msg.lang = 'en-GB';
         // msg.lang = 'ka-GE';
-        msg.rate=0.5;
+        msg.rate=0.9;
         window.speechSynthesis.speak(msg);
     }
 
