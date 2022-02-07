@@ -17,7 +17,6 @@ function clickHandler(e) {
         console.log({ word });
         var msg = new SpeechSynthesisUtterance(word);
         msg.lang = 'en-GB';
-        // msg.lang = 'ka-GE';
         msg.rate=0.9;
         window.speechSynthesis.speak(msg);
     }
