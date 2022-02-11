@@ -1,9 +1,16 @@
 
 
 // document.querySelectorAll(td)
+const topic = document.getElementsByTagName('title')[0].innerText;
+const topicPageHeader = document.getElementById("head");
+
+topicPageHeader.innerHTML = `<div class="back"><a href="../index.html"><img class="back_icon" src="../icons/arrow_left.png"></a></div><div class="topic_header"><h2>${topic}</h2></div>`;
+// const 
+
+//content
 const cells = document.getElementsByTagName('td');
 for (const cell of cells) {
-    cell.innerHTML = '<div class="card-wrapper"><img><img class="soundicon" src="../sound.png"></div><button>?</button>'
+    cell.innerHTML = '<div class="card-wrapper"><img class="table_image"><img class="soundicon" src="../icons/sound.png"></div><button>?</button>'
     
     const img = cell.getElementsByTagName('img')[0]
     const word = cell.getAttribute('word')
@@ -12,7 +19,8 @@ for (const cell of cells) {
 
 function clickHandler(e) {
     el = e.target;
-    if (el.tagName === 'IMG') {
+    // if (el.tagName === 'IMG') {
+        if (el.classList.contains('table_image')) {
         const word = el.parentElement.parentElement.getAttribute('word')
         console.log({ word });
         var msg = new SpeechSynthesisUtterance(word);
