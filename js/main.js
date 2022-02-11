@@ -4,8 +4,7 @@
 const topic = document.getElementsByTagName('title')[0].innerText;
 const topicPageHeader = document.getElementById("head");
 
-topicPageHeader.innerHTML = `<div class="back"><a href="../index.html"><img class="back_icon" src="../icons/arrow_left.png"></a></div><div class="topic_header"><h2>${topic}</h2></div>`;
-// const 
+topicPageHeader.innerHTML = `<div class="back"><a href="../index.html"><img class="back_icon" src="../icons/arrow_left.png"></a></div><div class="topic_header"><h2>${topic}</h2></div>`; 
 
 //content
 const cells = document.getElementsByTagName('td');
@@ -19,7 +18,6 @@ for (const cell of cells) {
 
 function clickHandler(e) {
     el = e.target;
-    // if (el.tagName === 'IMG') {
         if (el.classList.contains('table_image')) {
         const word = el.parentElement.parentElement.getAttribute('word')
         console.log({ word });

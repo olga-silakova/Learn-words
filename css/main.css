@@ -1,8 +1,6 @@
 * {
     font-family: Metric Light,Arial,sans-serif;
-
     /* font-family: SourceSansPro, Helvetica, Arial, sans-serif; */
-
     border-radius: 5px;
 }
 
@@ -78,34 +76,21 @@ img.table_image {
 
 .card-wrapper {
     position:relative;
-    /* left: 5px; */
     margin: 0px;
 }
 
 table {
     border-collapse: separate;
     border-spacing: 20px;
-    /* margin-left: 10px; */
  }
 
 .topics {
     width: 150px;
-    /* height: 100px; */
     padding-top: 5px;
     padding-bottom: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
     font-size: 25px;
-    /* border-radius: 100%; */
-    /* border: 1px solid #727272; */
-    /* display:table-cell; */
-    /* flex-direction: row; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* text-align: center; */
-    /* vertical-align: middle; */
-    /* float:left; */
-
 }
 
 td {
@@ -120,7 +105,6 @@ td {
  td:hover {
     border: 1px solid #000000;
  }
-
 
 .bold-label, p {
     font-weight: bold;
@@ -163,6 +147,4 @@ a:hover {
     width: 10px;
     height: 10px;
     vertical-align: middle;
-    
-    
 }
