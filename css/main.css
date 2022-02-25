@@ -6,7 +6,6 @@
 h1 {
     color: rgb(0, 169, 224);
     font-size: 30px;
-
 }
 
 #head {
@@ -22,17 +21,18 @@ h1 {
                 2px 2px 5px 0 rgba(0,0,0,.1),
                -2px 2px 5px 0 rgba(0,0,0,.1);
 }
+
 .back {
     width: 35px;
     height: 35px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 35px;
+    top: 15px;
+    left: 35px;
+    position: absolute;
 }
 
 .topic_header {
-    width: 80%;
-    display: inline-block;
+    padding-left: 70px;
+    padding-right: 70px;
     vertical-align: middle;
     color: white;
     text-transform: uppercase; 
