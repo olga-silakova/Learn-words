@@ -30,6 +30,10 @@ h1 {
     position: absolute;
 }
 
+.back:hover {
+    margin-left: -5px;
+}
+
 .topic_header {
     padding-left: 70px;
     padding-right: 70px;
