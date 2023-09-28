@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .red-div {
+            width: 380px;
+            height: 380px;
+            background-color: green;
+            position: relative;
+            /* Добавляем позицию relative, чтобы корректно позиционировать красные точки */
+        }
+
+        .red-dot {
+            width: 5px;
+            height: 5px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="body-content">
+        <div class="red-div" id="myImgId">
+        </div>
+        <p>X:<span id="x"></span></p>
+        <p>Y:<span id="y"></span></p>
+    </div>
+    <script type="text/javascript">
+        function FindPosition(oElement) {
+            if (typeof (oElement.offsetParent) != "undefined") {
+                for (var posX = 0, posY = 0; oElement; oElement = oElement.offsetParent) {
+                    posX += oElement.offsetLeft;
+                    posY += oElement.offsetTop;
+                }
+                return [posX, posY];
+            } else {
+                return [oElement.x, oElement.y];
+            }
+        }
+
+        function GetCoordinates(e) {
+            var PosX = 0;
+            var PosY = 0;
+            var ImgPos;
+            ImgPos = FindPosition(myImg);
+            if (!e) var e = window.event;
+            if (e.pageX || e.pageY) {
+                PosX = e.pageX;
+                PosY = e.pageY;
+            } else if (e.clientX || e.clientY) {
+                PosX = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+                PosY = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+            }
+            PosX = PosX - ImgPos[0];
+            PosY = PosY - ImgPos[1];
+            document.getElementById("x").innerHTML = PosX;
+            document.getElementById("y").innerHTML = PosY;
+
+            // Создаем красную точку
+            var redDot = document.createElement("div");
+            redDot.className = "red-dot";
+            redDot.style.left = PosX + "px";
+            redDot.style.top = PosY + "px";
+
+            // Добавляем красную точку к div
+            myImg.appendChild(redDot);
+        }
+
+        var myImg = document.getElementById("myImgId");
+        myImg.addEventListener("mousedown", GetCoordinates);
+    </script>
+</body>
+
+</html>
